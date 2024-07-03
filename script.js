@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 const body = document.querySelector("body");
 const nav = document.createElement("nav");
 const logo = document.createElement("img");
@@ -36,22 +37,45 @@ nav.appendChild(login);
 async function getProducts() {
   const res = await fetch("https://fakestoreapi.com/products");
   data = await res.json();
+  console.log(data[0])
   for (let i = 0; i < data.length; i++) {
     const container = document.createElement("div");
     body.appendChild(container);
+    const info = document.createElement('div');
+    info.classList.add("info");
+    container.appendChild(info);
     const image = document.createElement("img");
     image.classList.add("img");
     container.appendChild(image);
+    const description = document.createElement("p");
+    description.innerHTML=data[i].description
+    description.classList.add("description");
     const heading = document.createElement("h1");
-    container.appendChild(heading);
+    info.appendChild(heading);
     heading.classList.add("heading");
     const price = document.createElement("h2");
     price.classList.add("price");
-    container.appendChild(price);
+    info.appendChild(price);
     container.classList.add("container");
     image.src = data[i].image;
     heading.innerHTML = data[i].title;
     price.innerHTML = "$" + data[i].price;
-  }
-}
+    
+    container.addEventListener("click", () => {
+      // container.forEach(
+      //   (c) => c.classList.remove("active")
+      // );
+      container.classList.toggle("active");
+      container.classList.toggle("container");  
+      
+      info.insertBefore(description,price);
+      if(container.classList.contains("container")){
+        info.removeChild(description)
+    }
+
+    // container.classList.contains("active") ? console.log(data[i].title) : console.log("not active");
+    // });
+});
+}};
 getProducts();
+});

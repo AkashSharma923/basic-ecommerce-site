@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background-color: #252422;
+  overflow-x:hidden;
+}
+.container {
+  width: 400px;
+  height: 540px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+
+  flex-direction: column;
+  background-color: #ccc5b9;
+  border-radius: 19px;
+}
+.img {
+  height: 70%;
+  width: 100%;
+  background-color: transparent;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+  border-bottom: 4px solid #252422;
+}
+.heading {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: #252422;
+  margin: 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.price {
+  font-family: "Poppins", sans-serif;
+  margin: 10px;
+  font-size: 1.5rem;
+  color: #c7633b;
+  /* text-align: start; */
+}
+nav {
+  background-color: "#252422";
+  width: 100%;
+  height: 100px;
+  background-color: #403d39;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x:hidden;
+  transition: all 0.3s ease;
+}
+.logo{
+      cursor: pointer;
+      height: 100%;
+      padding: 5px;
+      transition: all 0.3s ease;
+}
+.logo:hover{
+      transform: scale(1.3);
+      border:5px solid #c7633b;
+      transition: all 0.3s ease;
+      padding: -5px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: #ccc5b9;
+  text-align: center;
+  width: 100%;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 65px;
+}
+li {
+  color: #ccc5b9;
+  cursor: pointer;
+  text-align: center;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+li:hover {
+  color: #c7633b;
+  transition: all 0.3s ease;
+  background-color: #252422;
+  padding: 5px;
+  border-radius: 15px;
+}
+.login{
+      background-color: #c7633b;
+      font-family: "Poppins", sans-serif;
+      font-size: 1.5rem;
+      color: #252422;
+      height: max-content;
+      border-radius: 10px;
+      padding: 7px 15px;
+      color: #252422;
+      /* padding-right: 10px;
+      padding-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px; */
+      border: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+}
+.login:hover{
+  color: white;
+  border-radius: 55px;
+  background-color: #252422;
+  transition: all 0.3s ease;
+}
